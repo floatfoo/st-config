@@ -15,9 +15,7 @@ static int borderpx = 2;
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
- */
-static char *shell = "/bin/sh";
-char *utmp = NULL;
+ */ static char *shell = "/bin/sh"; char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
@@ -100,28 +98,28 @@ float alpha = 0.8;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#0b050f", /* black   */
-  [1] = "#1b1123", /* red     */
-  [2] = "#30203b", /* green   */
-  [3] = "#4c365d", /* yellow  */
-  [4] = "#715289", /* blue    */
-  [5] = "#9877b3", /* magenta */
-  [6] = "#bda8cf", /* cyan    */
-  [7] = "#e7e0ed", /* white   */
+  [0] = "#030404", /* black   */
+  [1] = "#121313", /* red     */
+  [2] = "#232525", /* green   */
+  [3] = "#3b3e3e", /* yellow  */
+  [4] = "#5a5e5e", /* blue    */
+  [5] = "#7f8485", /* magenta */
+  [6] = "#aab1b2", /* cyan    */
+  [7] = "#dde3e4", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#daa060", /* black   */
-  [9]  = "#799c39", /* red     */
-  [10] = "#a47c54", /* green   */
-  [11] = "#5ba693", /* yellow  */
-  [12] = "#d49e64", /* blue    */
-  [13] = "#bb9066", /* magenta */
-  [14] = "#ab59dd", /* cyan    */
-  [15] = "#ad7dd1", /* white   */
+  [8]  = "#a59e31", /* black   */
+  [9]  = "#d967be", /* red     */
+  [10] = "#ea61cb", /* green   */
+  [11] = "#f462d4", /* yellow  */
+  [12] = "#c0ba4a", /* blue    */
+  [13] = "#f69c89", /* magenta */
+  [14] = "#ed64ce", /* cyan    */
+  [15] = "#5dbb84", /* white   */
 
   /* special colors */
-  [256] = "#050308", /* background */
-  [257] = "#e2daea", /* foreground */
+  [256] = "#020202", /* background */
+  [257] = "#dae1e2", /* foreground */
 };
 
 /*
