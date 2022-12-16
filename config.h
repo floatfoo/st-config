@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font:pixelsize=17:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -15,7 +15,9 @@ static int borderpx = 2;
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
- */ static char *shell = "/bin/sh"; char *utmp = NULL;
+ */
+static char *shell = "/bin/sh";
+char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
@@ -98,28 +100,28 @@ float alpha = 0.8;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#030404", /* black   */
-  [1] = "#121313", /* red     */
-  [2] = "#232525", /* green   */
-  [3] = "#3b3e3e", /* yellow  */
-  [4] = "#5a5e5e", /* blue    */
-  [5] = "#7f8485", /* magenta */
-  [6] = "#aab1b2", /* cyan    */
-  [7] = "#dde3e4", /* white   */
+  [0] = "#000000", /* black   */
+  [1] = "#10110f", /* red     */
+  [2] = "#232321", /* green   */
+  [3] = "#3c3c38", /* yellow  */
+  [4] = "#5b5c56", /* blue    */
+  [5] = "#82837b", /* magenta */
+  [6] = "#afb0a5", /* cyan    */
+  [7] = "#e2e4d6", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#a59e31", /* black   */
-  [9]  = "#d967be", /* red     */
-  [10] = "#ea61cb", /* green   */
-  [11] = "#f462d4", /* yellow  */
-  [12] = "#c0ba4a", /* blue    */
-  [13] = "#f69c89", /* magenta */
-  [14] = "#ed64ce", /* cyan    */
-  [15] = "#5dbb84", /* white   */
+  [8]  = "#afa9d3", /* black   */
+  [9]  = "#dd7ab8", /* red     */
+  [10] = "#9da268", /* green   */
+  [11] = "#e3a58b", /* yellow  */
+  [12] = "#76bece", /* blue    */
+  [13] = "#79cca6", /* magenta */
+  [14] = "#e8b29e", /* cyan    */
+  [15] = "#6b959e", /* white   */
 
   /* special colors */
-  [256] = "#020202", /* background */
-  [257] = "#dae1e2", /* foreground */
+  [256] = "#000000", /* background */
+  [257] = "#e2e4d6", /* foreground */
 };
 
 /*
@@ -130,14 +132,6 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
-
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
